@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-
+import React, { Component } from "react";
+import Header from "./Header";
+import AllCampus from "./AllCampus";
 /* The code below does NOT relate to your project.
    This code is just a nice BIG example of how you can make a component.
    Also it is HILARIOUS :D Have fun!
@@ -7,10 +8,15 @@ import React, { Component } from 'react';
 
 const Root = () => {
   return (
-    <h1>HELLO!!!!</h1>  )
-}
+    <div id="root" className="container-fluid">
+      <div className="col-xs-12">
+        <Header />
+      </div>
+      <div className="col-xs-12">
+        <AllCampus />
+      </div>
+    </div>
+  );
+};
 
-
-export default Root
-
-
+export default Root;
