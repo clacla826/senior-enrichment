@@ -2,7 +2,6 @@ const db = require("./server/db");
 const Campus = require("./server/db/models/campuses");
 const Student = require("./server/db/models/students");
 
-console.log("SEEDING!!!")
 
 const campuses = [
   {
