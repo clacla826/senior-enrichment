@@ -7,7 +7,7 @@ import AllCampus from "./AllCampus";
 import AllStudent from "./AllStudent";
 import SingleCampus from "./SingleCampus";
 import SingleStudent from "./SingleStudent";
-import CampusForm from "./CampusForm";
+import EditCampusForm from "./EditCampusForm";
 
 
 
@@ -45,7 +45,8 @@ return (
           <Route exact path='/campuses/:campusId' component={SingleCampus} />
           <Route exact path='/students' component={AllStudent} />
           <Route path='/students/:studentId' component={SingleStudent} />
-          <Route path='/campusform/:campusId' component={CampusForm} />
+          <Route exact path='/campusform' component={EditCampusForm} />
+          <Route path='/campusform/:campusId' component={EditCampusForm} />
         </div>
       </div>
       </Router>

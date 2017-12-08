@@ -32,6 +32,7 @@ export default class SingleCampus extends Component {
       })
   }
 
+  
   render() {
     const campus = this.state.campus;
     console.log("SINGLE CAMPUSS", this.state)

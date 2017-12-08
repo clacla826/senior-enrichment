@@ -25,6 +25,9 @@ class AllCampus extends Component {
 
     return (
       <div>
+      <div>
+      <Link to='/campusform'>CREATE A CAMPUS</Link>
+      </div>
         <div className="row">
           <h2>OUR CAMPUSES</h2>
           {campuses.map(campus => (
