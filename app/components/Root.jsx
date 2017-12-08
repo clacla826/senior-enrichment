@@ -6,6 +6,7 @@ import Header from "./Header";
 import AllCampus from "./AllCampus";
 import AllStudent from "./AllStudent";
 import SingleCampus from "./SingleCampus";
+import SingleStudent from "./SingleStudent";
 
 
 
@@ -42,6 +43,7 @@ return (
           <Route exact path='/campuses' component={AllCampus} />
           <Route exact path='/campuses/:campusId' component={SingleCampus} />
           <Route exact path='/students' component={AllStudent} />
+          <Route path='/students/:studentId' component={SingleStudent} />
         </div>
       </div>
       </Router>
