@@ -39,9 +39,9 @@ return (
         </div>
         <div className="col-xs-12">
           <Route exact path='/' component={AllCampus} />
-          <Route path='/campuses' component={AllCampus} />
+          <Route exact path='/campuses' component={AllCampus} />
           <Route exact path='/students' component={AllStudent} />
-          <Route path='/campuses/:campusId' component={SingleCampus} />
+          <Route exact path='/campuses/:campusId' component={SingleCampus} />
         </div>
       </div>
       </Router>

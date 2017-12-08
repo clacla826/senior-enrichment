@@ -19,6 +19,10 @@ router.get('/:campusId', (req, res, next) => {
     .catch(next)
 })
 
+router.get('/:campusId/students', (req, res, next) => {
+  req.campus.
+})
+
 
 router.post('/', (req, res, next) => {
   Campus.create({

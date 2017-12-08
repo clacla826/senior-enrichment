@@ -29,7 +29,7 @@ class AllCampus extends Component {
           <h2>OUR CAMPUSES</h2>
           {campuses.map(campus => (
             <div className="col-xs-4" key={campus.id}>
-              <Link  className="thumbnail" to={`/api/campuses/${campus.id}`}>
+              <Link  className="thumbnail" to={`/campuses/${campus.id}`}>
                 <img src={campus.imageUrl} />
               </Link>
 
