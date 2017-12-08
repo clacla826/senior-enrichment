@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { HashRouter as Router, Route} from 'react-router-dom';
-import axios from 'axios';
+import axios from "axios";
 
 import Header from "./Header";
 import AllCampus from "./AllCampus";
@@ -9,7 +9,7 @@ import SingleCampus from "./SingleCampus";
 
 
 
-class Root extends Component{
+class Root extends Component {
 
   constructor() {
     super();
