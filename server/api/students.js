@@ -12,6 +12,10 @@ router.get('/', function (req, res, next) {
     .catch(next);
 });
 
+// router.get('/:campusId/students', (req, res, next) => {
+//   console.log(req.body)
+// })
+
 router.get('/:studentId', (req, res, next) => {
   //console.log(req.params.studentId)
   Student.findById(req.params.studentId)
@@ -25,7 +29,7 @@ router.post('/', (req, res, next) => {
     lastName: req.body.lastName,
     email: req.body.email,
     gpa: req.body.gpa,
-    campusId: req.body.campusId 
+    campusId: req.body.campusId
   })
     .then(createdStudent => {
       res.json(createdStudent);

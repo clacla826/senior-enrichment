@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { Campus } = require('../db/models');
+const { Campus, Student } = require('../db/models');
 //const Student = models.Student;
 module.exports =router;
 
@@ -20,7 +20,15 @@ router.get('/:campusId', (req, res, next) => {
 })
 
 router.get('/:campusId/students', (req, res, next) => {
-  req.campus.
+  Campus.findById(req.params.campusId)
+  //.then(res => console.log(res.id))
+  .then(res => Student.findAll({
+    where: {
+      campusId: res.id
+    }
+  }))
+  .then(campusStudents => res.send(campusStudents))
+  .catch(next)
 })
 
 
