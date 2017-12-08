@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CampusStudents = props => {
   const students = props.students;
@@ -22,13 +23,14 @@ const CampusStudents = props => {
             students.map(student => (
               <tr key={student.id}>
                 <td>{student.id}</td>
-                <td>{student.name}</td>
+                <td><Link to={`/students/${student.id}`}>{student.name}</Link></td>
                 <td>{student.campusId}</td>
                 <td>{student.email}</td>
                 <td>{student.gpa}</td>
                 <td>
                   <button type="button">Delete</button>
                 </td>
+
               </tr>
             ))}
         </tbody>

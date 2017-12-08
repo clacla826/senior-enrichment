@@ -37,10 +37,10 @@ export default class SingleCampus extends Component {
     console.log("SINGLE CAMPUSS", this.state)
     return (
       <div className="campus">
-      <h1>HIIIIIHOHOOO</h1>
+      <h1>{campus.name}</h1>
         <div>
-          <h3>{campus.name}</h3>
-          <img src={campus.imageUrl} className="img-thumbnail" />
+        <img src={campus.imageUrl} className="img-thumbnail" />
+        <h3>{campus.description}</h3>
         </div>
 
         <CampusStudents students={campus.students} />

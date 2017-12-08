@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 export default class AllStudent extends Component {
   constructor() {
@@ -39,7 +40,7 @@ export default class AllStudent extends Component {
           students && students.map(student => (
             <tr key={student.id}>
               <td>{student.id}</td>
-              <td>{ student.name }</td>
+              <td><Link to={`/students/${student.id}`}>{student.name}</Link></td>
               <td>{ student.campusId }</td>
               <td>{student.email}</td>
               <td>{ student.gpa }</td>

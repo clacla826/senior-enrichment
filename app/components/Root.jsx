@@ -40,8 +40,8 @@ return (
         <div className="col-xs-12">
           <Route exact path='/' component={AllCampus} />
           <Route exact path='/campuses' component={AllCampus} />
-          <Route exact path='/students' component={AllStudent} />
           <Route exact path='/campuses/:campusId' component={SingleCampus} />
+          <Route exact path='/students' component={AllStudent} />
         </div>
       </div>
       </Router>
