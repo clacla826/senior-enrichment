@@ -27,13 +27,14 @@ export default class EditCampusForm extends Component {
   handleSubmit(evt) {
     evt.preventDefault();
     console.log("THISSSSS STATE", this.state)
-    const campus= this.state.campusName;
-    const imageUrl = this.state.imageUrl;
-    const description = this.state.description;
-    const campusToSend = {campus, imageUrl, description}
-    { campus: }
+
+    const campusToPost = {
+      campus: this.state.campusName,
+      imageUrl: this.state.imageUrl,
+      description: this.state.description }
     //you want to post on database
-    axios.post('/api/campuses', { })
+    axios.put(`/api/campuses/${this.state.campus.id}`, { campusToPost })
+      .then(res => console.log('resDATA', res.data))
 
     this.setState({
       campusName: '',
