@@ -22,7 +22,7 @@ class AllCampus extends Component {
 
   render() {
     const campuses = this.state.campuses;
-    console.log(campuses);
+
     return (
       <div>
         <div className="row">

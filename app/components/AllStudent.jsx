@@ -18,7 +18,7 @@ export default class AllStudent extends Component {
 
   render() {
     const students = this.state.students;
-    console.log('ALL Students', students);
+    //console.log('ALL Students', students);
 
     return (
       <div>
