@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Bluebird from "bluebird";
-import AllStudent from "./AllStudent";
+import { Link } from "react-router-dom";
 import CampusStudents from "./CampusStudents";
 
 export default class SingleCampus extends Component {
@@ -38,6 +38,9 @@ export default class SingleCampus extends Component {
     return (
       <div className="campus">
       <h1>{campus.name}</h1>
+
+      <Link to={`/campusform/${campus.id}`}>Edit Campus Info</Link>
+
         <div>
         <img src={campus.imageUrl} className="img-thumbnail" />
         <h3>{campus.description}</h3>
