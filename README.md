@@ -19,7 +19,7 @@ You are the CTO of the Margaret Hamilton Interplanetary Academy of JavaScript. C
 
 ### The tools
 
-Use at least Sequelize, Express and React when creating this app. This app is small, so just using React is reasonable, but note that without practicing with more frontend libraries you will have a steep learning curve in senior phase. If you are going forward with ***just React*** you will benefit from **deleting all references to React-Redux, Redux and React-Router** (so you don't confuse yourself with trying to use something in half your files and not the other half). 
+Use at least Sequelize, Express and React when creating this app. This app is small, so just using React is reasonable, but note that without practicing with more frontend libraries you will have a steep learning curve in senior phase. If you are going forward with ***just React*** you will benefit from **deleting all references to React-Redux, Redux and React-Router** (so you don't confuse yourself with trying to use something in half your files and not the other half).
 
 If you feel ready, start by incorporating React-Router, Redux and React-Redux (we helped get you started with this!)! If you go this route, it will be great practice and will prepare you **well** for senior phase.
 
@@ -97,7 +97,7 @@ DELETE
 
 ### How to test functionality without a frontend
 - GET: use your browser
-- POST / PUT / DELETE : 
+- POST / PUT / DELETE :
  - CLI (command line interface) with `curl`
    - e.g. `curl -H "Content-Type: application/json" -X POST -d '{"username":"kate","password":"1234"}' http://localhost:3000/api/login`
    - `-H`: headers. `-X`: verb. `-d`: data (must be of the type specified in headers). http://[address]:[port]/[route_path]
@@ -119,3 +119,16 @@ Once you've recorded your screencast, please *upload it to YouTube as an unliste
 - Frontend logic and functionality (25%)
 - Design + Bonus features (up to 10 Extra Credit points)
 
+
+
+https://image.ibb.co/f4uDNw/campus_logos_0000_Layer_6.jpg
+
+https://image.ibb.co/m6nB9b/campus_logos_0001_Layer_5.jpg
+
+https://image.ibb.co/kM202w/campus_logos_0002_Layer_4.jpg
+
+https://image.ibb.co/gzSYNw/campus_logos_0003_Layer_3.jpg
+
+https://image.ibb.co/mtRShw/campus_logos_0004_Layer_2.jpg
+
+https://image.ibb.co/hffbaG/campus_logos_0005_Layer_1.jpg

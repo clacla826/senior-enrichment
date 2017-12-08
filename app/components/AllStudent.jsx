@@ -31,6 +31,7 @@ export default class AllStudent extends Component {
           <th>Campus</th>
           <th>email</th>
           <th>gpa</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -42,6 +43,8 @@ export default class AllStudent extends Component {
               <td>{ student.campusId }</td>
               <td>{student.email}</td>
               <td>{ student.gpa }</td>
+              <td><button type="button">Delete</button>
+              </td>
             </tr>
           ))
         }
