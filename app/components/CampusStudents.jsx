@@ -23,20 +23,16 @@ const CampusStudents = props => {
             students.map(student => (
               <tr key={student.id}>
                 <td>{student.id}</td>
+                <td><Link to={`/students/${student.id}`}>{student.name}</Link></td>
                 <td>
-                  <Link to={`/students/${student.id}`}>{student.name}</Link>
+                <Link to={`/campuses/${student.campusId}`}>{student.campusId}</Link>
                 </td>
-                <td>
-                  <Link to={`/campuses/${student.campusId}`}>
-                    {student.campusId}
-                  </Link>
-                </td>
-                <td>{student.campusId}</td>
                 <td>{student.email}</td>
                 <td>{student.gpa}</td>
                 <td>
                   <button type="button">Delete</button>
                 </td>
+
               </tr>
             ))}
         </tbody>
