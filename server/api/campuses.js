@@ -46,11 +46,34 @@ router.post('/', (req, res, next) => {
 
 router.put('/:campusId', (req, res, next) => {
   const info = req.body
+  console.log(info)
   Campus.findById(req.params.campusId)
     .then(campus => campus.update(info))
-    .then(updatedStudent => res.json(updatedStudent))
+    .then(updatedCampus => {
+      console.log('THROUGH ROUTER UPDATED res', updatedCampus)
+      res.json(updatedCampus)})
     .catch(next);
 })
+
+
+// router.put('/:campusId', (req, res, next) => {
+//   const info = req.body
+//   console.log(info)
+//   Campus.findById(req.params.campusId)
+//     .then(campus => {
+//       campus.name = info.name;
+//       campus.imageUrl = info.imageUrl;
+//       campus.description = info.description;
+//       campus.save();
+//     })
+//     .then(updatedCampus => {
+//       console.log('THROUGH ROUTER UPDATED res', updatedCampus)
+//       res.json(updatedCampus)})
+//     .catch(next);
+// })
+
+
+
 
 router.delete('/:campusId', (req, res, next) => {
   Campus.destroy({

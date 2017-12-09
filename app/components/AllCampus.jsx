@@ -22,6 +22,7 @@ class AllCampus extends Component {
 
   render() {
     const campuses = this.state.campuses;
+    console.log("ALLCAMPUS THIS STATE", this.state)
 
     return (
       <div>
