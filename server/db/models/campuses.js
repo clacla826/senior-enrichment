@@ -13,8 +13,8 @@ const Campus = db.define('campus', {
   },
   imageUrl: {
     type: DataTypes.STRING,
-    allowNull: false,
-    defaultValue: true
+    allowNull: true,
+    defaultValue: "https://d24oe5tmwdgz7x.cloudfront.net/event/56919/banner/event_1509963609.jpg"
   },
   description: {
     type: DataTypes.TEXT,
