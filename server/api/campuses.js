@@ -32,17 +32,32 @@ router.get('/:campusId/students', (req, res, next) => {
 })
 
 
+// router.post('/', (req, res, next) => {
+
+//   Campus.create({
+//     name: req.body.name,
+//     imageUrl: req.body.imageUrl,
+//     description: req.body.description,
+//   })
+//     .then(createdCampus => {
+//       res.json(createdCampus);
+//     })
+//     .catch(next);
+// })
+
 router.post('/', (req, res, next) => {
-  Campus.create({
-    name: req.body.name,
-    imageUrl: req.body.imageUrl,
-    description: req.body.description,
+  console.log("REQ BODY", req.body)
+    Campus.create(
+      req.body
+    )
+      .then(createdCampus => {
+        console.log(createdCampus)
+        res.json(createdCampus);
+      })
+      .catch(next);
   })
-    .then(createdCampus => {
-      res.json(createdCampus);
-    })
-    .catch(next);
-})
+
+
 
 router.put('/:campusId', (req, res, next) => {
   const info = req.body
