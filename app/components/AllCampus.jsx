@@ -123,7 +123,7 @@ class AllCampus extends Component {
         <div>
           <Link to="/campusform">CREATE A CAMPUS</Link>
         </div>
-        <div className="row">
+        <div>
           <h2>OUR CAMPUSES</h2>
           {campuses.map(campus => (
             <div className="col-xs-4" key={campus.id}>

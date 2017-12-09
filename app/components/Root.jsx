@@ -8,6 +8,7 @@ import AllStudent from "./AllStudent";
 import SingleCampus from "./SingleCampus";
 import SingleStudent from "./SingleStudent";
 import EditCampusForm from "./EditCampusForm";
+import CreateCampusForm from "./CreateCampusForm";
 
 export default class Root extends Component {
   constructor() {
@@ -47,7 +48,7 @@ export default class Root extends Component {
             <Route exact path="/campuses/:campusId" component={SingleCampus} />
             <Route exact path="/students" component={AllStudent} />
             <Route path="/students/:studentId" component={SingleStudent} />
-            <Route exact path="/campusform" component={EditCampusForm} />
+            <Route exact path="/campusform" component={CreateCampusForm} />
             <Route path="/campusform/:campusId" component={EditCampusForm} />
           </div>
         </div>

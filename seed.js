@@ -14,12 +14,12 @@ const campuses = [
     description: "nice campus near chealsea"
   },
   {
-    name: "GREEN",
+    name: "ROYCE",
     imageUrl: "https://image.ibb.co/kM202w/campus_logos_0002_Layer_4.jpg",
     description: "Super expensive but worth it"
   },
   {
-    name: "ACE",
+    name: "GREEN",
     imageUrl: "https://image.ibb.co/gzSYNw/campus_logos_0003_Layer_3.jpg",
     description: "In brooklyn you dont have to commute to the city"
   }
