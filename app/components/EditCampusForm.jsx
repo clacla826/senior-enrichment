@@ -14,6 +14,7 @@ export default class EditCampusForm extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDelete = this.handleDelete.bind(this)
   }
 
   handleChange(evt) {
@@ -43,6 +44,22 @@ export default class EditCampusForm extends Component {
       imageUrl: '',
       description: ''
     })
+
+  }
+
+  handleDelete(evt) {
+    evt.preventDefault();
+    axios
+      .delete(`/api/campuses/${this.state.campus.id}`)
+      .then(res => console.log('resDATA Deleted', res.data))
+
+      console.log("DELETED CAMPUS", this.state)
+
+      this.setState({
+        campusName: '',
+        imageUrl: '',
+        description: ''
+      })
 
   }
 
@@ -98,6 +115,7 @@ export default class EditCampusForm extends Component {
 
           <input type="submit" value="Submit" />
           </form>
+          <button type="button" value="Delete This Campus" onClick={this.handleDelete}>Delete This Campus</button>
           <br />
           <br />
 

@@ -52,7 +52,7 @@ export default class CreateCampusForm extends Component {
     //if there is no params or campusId
     return (
       <div>
-        <h1>CREDIT CAMPUS</h1>
+        <h1>CREATE CAMPUS</h1>
         <div className="new-form">
           <form onSubmit={this.handleSubmit}>
             <lable htmlFor="campusName" >

@@ -23,7 +23,7 @@ export default class AllStudent extends Component {
 
     return (
       <div>
-        <button type="button">Add Student</button>
+      <Link to="/studentform">ADD NEW STUDENT</Link>
         <table className="table">
           <thead>
             <tr>
