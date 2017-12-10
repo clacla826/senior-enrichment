@@ -90,8 +90,6 @@ export default class CreateCampusForm extends Component {
           </form>
           <br />
           <br />
-
-          <CampusStudents students={campus.students} />
         </div>
       </div>
     );

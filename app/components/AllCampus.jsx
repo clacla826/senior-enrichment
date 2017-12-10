@@ -23,6 +23,8 @@ const divStyle3={
   background: "#eee",
   padding: "20px",
   margin: "0 auto",
+  height: "100%",
+  width:"100%",
   float: "center",
   align: "center",
   "font-family" : "Helvetica, sans-serif"
