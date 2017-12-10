@@ -3,6 +3,14 @@ import axios from "axios";
 import Bluebird from "bluebird";
 import CampusStudents from "./CampusStudents";
 
+const divStyle={
+  padding: "20px",
+  margin: "0 auto",
+  float: "left",
+  align: "center",
+  "font-family" : "Helvetica, sans-serif"
+}
+
 export default class CreateCampusForm extends Component {
   constructor() {
     super();
@@ -51,7 +59,7 @@ export default class CreateCampusForm extends Component {
     console.log(this.props);
     //if there is no params or campusId
     return (
-      <div>
+      <div style={divStyle}>
         <h1>CREATE CAMPUS</h1>
         <div className="new-form">
           <form onSubmit={this.handleSubmit}>

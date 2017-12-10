@@ -29,8 +29,7 @@ export default class CreateStudent extends Component {
       campusId: this.state.campusId
     }
 
-    axios.post('/api/students', studentToPost)
-    .then(res => console.log("NEW STUDENT:", res.data))
+    this.props.addStudentToList(studentToPost);
 
     this.setState({
       firstName: "",

@@ -1,6 +1,16 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import CreateStudent from "./CreateStudent"
+
+const divStyle={
+  padding: "20px",
+  margin: "0 auto",
+  float: "left",
+  align: "center",
+  "font-family" : "Helvetica, sans-serif"
+}
+
 
 export default class AllStudent extends Component {
   constructor() {
@@ -9,13 +19,32 @@ export default class AllStudent extends Component {
       students: []
     };
     this.handleDelete = this.handleDelete.bind(this);
+    this.addStudentToList =this.addStudentToList.bind(this);
+    this.fetchList =this.fetchList.bind(this);
   }
 
-  componentDidMount() {
-    axios
-      .get("/api/students")
+  //Adding Created Student to List
+  addStudentToList(studentToPost) {
+    axios.post(`api/students`, studentToPost)
       .then(res => res.data)
-      .then(students => this.setState({ students }));
+      .then(createdStudent => {
+        const newStudentList = [...this.state.students, createdStudent]
+        this.setState({ students: newStudentList});
+      })
+
+  }
+
+  fetchList() {
+    axios.get("/api/students")
+    .then(res => res.data)
+    .then(students => this.setState({ students }));
+  }
+  componentDidMount() {
+    this.fetchList();
+  }
+
+  componentWillReceiveProps (nextProps) {
+    console.log("nextProps", nextProps)
   }
 
   handleDelete(evt) {
@@ -24,16 +53,16 @@ export default class AllStudent extends Component {
     axios
       .delete(`/api/students/${evt.target.name}`)
       .then(res => console.log(res.data))
+    this.fetchList();
 
   }
 
   render() {
     const students = this.state.students;
-    //console.log('ALL Students', students);
 
     return (
-      <div>
-      <Link to="/studentform">ADD NEW STUDENT</Link>
+      <div style={divStyle}>
+      <h1>LIST OF STUDENTS</h1>
         <table className="table">
           <thead>
             <tr>
@@ -64,7 +93,9 @@ export default class AllStudent extends Component {
                 </tr>
               ))}
           </tbody>
-        </table>
+        </table><br /><br />
+
+        <CreateStudent addStudentToList={this.addStudentToList}/>
       </div>
     );
   }
