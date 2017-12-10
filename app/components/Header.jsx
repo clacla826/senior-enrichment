@@ -2,10 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const divStyle={
-  background: "#202A59",
+  background: "#202A50",
   padding: "20px",
   margin: "0 auto",
   "font-family" : "Helvetica, sans-serif",
+  color: "#FFFFFF"
+}
+
+const style2={
   color: "#FFFFFF"
 }
 
@@ -20,13 +24,13 @@ const Header = () => {
       <div id="navbar"  >
         <ul className="nav navbar-nav">
           <li>
-            <Link to="/">HOME</Link>
+            <Link style={style2} to="/">HOME</Link>
           </li>
           <li>
-          <Link to="/">CAMPUSES</Link>
+          <Link  style={style2} to="/">CAMPUSES</Link>
         </li>
           <li>
-            <Link to="/students">STUDENTS</Link>
+            <Link style={style2}  to="/students">STUDENTS</Link>
           </li>
         </ul>
       </div>

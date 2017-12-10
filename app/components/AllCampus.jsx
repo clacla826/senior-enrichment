@@ -100,6 +100,23 @@ const divStyle={
   "font-family" : "Helvetica, sans-serif"
 }
 
+const divStyle2={
+  background: "#eee",
+  height: "100%",
+  width:"100%",
+  overflow: "hidden",
+  align: "center"
+}
+
+const divStyle3={
+  background: "#eee",
+  padding: "20px",
+  margin: "0 auto",
+  float: "center",
+  align: "center",
+  "font-family" : "Helvetica, sans-serif"
+}
+
 class AllCampus extends Component {
   constructor() {
     super();
@@ -128,11 +145,12 @@ class AllCampus extends Component {
     console.log("ALLCAMPUS THIS STATE", this.state);
 
     return (
-      <div style={divStyle}>
+      <div style={divStyle2}>
+      <div style={divStyle3}>
         <div >
           <Link to="/campusform">CREATE A CAMPUS</Link>
         </div>
-        <div style={divStyle} >
+        <div style={divStyle3} >
           <h2>OUR CAMPUSES</h2>
           <div>
             {campuses.map(campus => (
@@ -145,6 +163,7 @@ class AllCampus extends Component {
             ))}
           </div>
         </div>
+      </div>
       </div>
     );
   }
