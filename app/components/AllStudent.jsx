@@ -8,6 +8,7 @@ export default class AllStudent extends Component {
     this.state = {
       students: []
     };
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
   componentDidMount() {
@@ -15,6 +16,15 @@ export default class AllStudent extends Component {
       .get("/api/students")
       .then(res => res.data)
       .then(students => this.setState({ students }));
+  }
+
+  handleDelete(evt) {
+    console.log(evt.target.name)
+    evt.preventDefault();
+    axios
+      .delete(`/api/students/${evt.target.name}`)
+      .then(res => console.log(res.data))
+
   }
 
   render() {
@@ -49,7 +59,7 @@ export default class AllStudent extends Component {
                   <td>{student.email}</td>
                   <td>{student.gpa}</td>
                   <td>
-                    <button type="button">Delete</button>
+                    <button name={student.id} type="button" onClick={this.handleDelete}>Delete</button>
                   </td>
                 </tr>
               ))}
