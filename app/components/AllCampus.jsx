@@ -91,6 +91,15 @@ import { Link } from "react-router-dom";
 // //  this.fetchPlaylistById(nextPlaylistId);
 // }
 
+const divStyle={
+  background: "#eee",
+  padding: "20px",
+  margin: "0 auto",
+  float: "left",
+  align: "center",
+  "font-family" : "Helvetica, sans-serif"
+}
+
 class AllCampus extends Component {
   constructor() {
     super();
@@ -119,25 +128,22 @@ class AllCampus extends Component {
     console.log("ALLCAMPUS THIS STATE", this.state);
 
     return (
-      <div>
-        <div>
+      <div style={divStyle}>
+        <div >
           <Link to="/campusform">CREATE A CAMPUS</Link>
         </div>
-        <div>
+        <div style={divStyle} >
           <h2>OUR CAMPUSES</h2>
-          {campuses.map(campus => (
-            <div className="col-xs-4" key={campus.id}>
-              <Link className="thumbnail" to={`/campuses/${campus.id}`}>
-                <img src={campus.imageUrl} />
-              </Link>
-
-              <div className="caption">
-                <h5>
-                  <span>{campus.name}</span>
-                </h5>
+          <div>
+            {campuses.map(campus => (
+              <div style={divStyle} className="campus" key={campus.id}>
+                <h4>{campus.name}</h4>
+                <Link className="thumbnail" to={`/campuses/${campus.id}`}>
+                  <img src={campus.imageUrl} />
+                </Link>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     );
