@@ -20,9 +20,6 @@ export default class EditCampusForm extends Component {
   handleChange(evt) {
     console.log("EVTTTTT", evt.target.name, evt.target.value)
     this.setState({[evt.target.name] : evt.target.value });
-
-
-
   }
 
   handleSubmit(evt) {
@@ -119,7 +116,7 @@ export default class EditCampusForm extends Component {
           <br />
           <br />
 
-          <CampusStudents students={campus.students} />
+
         </div>
       </div>
     );

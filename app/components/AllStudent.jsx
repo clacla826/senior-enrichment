@@ -39,6 +39,7 @@ export default class AllStudent extends Component {
     .then(res => res.data)
     .then(students => this.setState({ students }));
   }
+  
   componentDidMount() {
     this.fetchList();
   }
